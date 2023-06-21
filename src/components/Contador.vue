@@ -3,7 +3,6 @@
   <h3>tituloComponente</h3>
   <p>{{ numero }} <sup>2</sup>={{obtenerCuadradroComputado}}</p>
   <p>{{ numero }} <sup>2</sup>={{obtenerCuadradroComputado}}</p>
-  <p>{{ numero }} <sup>2</sup>={{obtenerCuadradroComputado}}</p>
   <button v-on:click="aumentar">+</button>
   <button v-on:click="reducir">-</button>
 </template>
@@ -45,6 +44,10 @@ export default {
   props:['titulo','valor2']
 };
 </script>
+
+
+
+
 
 <style>
 
