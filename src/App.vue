@@ -1,11 +1,13 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  
-  <Contador titulo="Profesor" valor2="15"></Contador>
-  <Contador titulo="Estudiante"/>
+
+  <Contador titulo="Profesor" v-bind:inicio="25+75"></Contador>
+  <Contador titulo="Estudiante" :inicio="101"/>
+
 </template>
 
 <script>
+import Calculadora from "./components/Calculadora.vue";
 import Contador from "./components/Contador.vue";
 
 export default {
@@ -13,8 +15,8 @@ export default {
   name: "App",
   components: {
     Contador,
+    Calculadora,
   },
-
 };
 </script>
 
