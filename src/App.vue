@@ -1,14 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
 
-  <Contador titulo="Profesor" v-bind:inicio="25+75"></Contador>
-  <Contador titulo="Estudiante" :inicio="101"/>
+  <CaracolaMagica/>
 
 </template>
 
 <script>
 import Calculadora from "./components/Calculadora.vue";
+import CaracolaMagica from './components/CaracolaMagica.vue';
 import Contador from "./components/Contador.vue";
+
 
 export default {
   //Options API
@@ -16,6 +16,7 @@ export default {
   components: {
     Contador,
     Calculadora,
+    CaracolaMagica,
   },
 };
 </script>
