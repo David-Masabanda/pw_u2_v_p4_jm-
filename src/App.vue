@@ -1,11 +1,11 @@
 <template>
-
+        
   <CaracolaMagica/>
 
 </template>
 
 <script>
-import Calculadora from "./components/Calculadora.vue";
+
 import CaracolaMagica from './components/CaracolaMagica.vue';
 import Contador from "./components/Contador.vue";
 
@@ -15,7 +15,6 @@ export default {
   name: "App",
   components: {
     Contador,
-    Calculadora,
     CaracolaMagica,
   },
 };
