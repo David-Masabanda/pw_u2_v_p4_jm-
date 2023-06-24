@@ -1,4 +1,5 @@
 <template>
+
   <h1>Caracola Magica</h1>
   <img v-if="rutaImagen" :src="rutaImagen" alt="No se puede cargar la imagen" />
 
@@ -28,10 +29,14 @@ export default {
     pregunta(value, oldValue) {
       console.log(value);
       console.log(oldValue);
+      this.respuesta='Pensando...';
       if (value.includes("?")) {
         console.log("Consumir el API");
         this.consumirAPI();
+        this.respuesta='';
+        this.pregunta='';
       }
+    
     },
   },
 
@@ -46,7 +51,11 @@ export default {
       this.respuesta = answer;
       this.rutaImagen = image;
     },
+
+    
   },
+
+
 };
 </script>
 
