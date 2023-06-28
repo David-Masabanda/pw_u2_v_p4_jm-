@@ -1,21 +1,25 @@
 <template>
+
         
-  <CaracolaMagica/>
+
+  <Ejercicio/>
 
 </template>
 
 <script>
 
-import CaracolaMagica from './components/CaracolaMagica.vue';
-import Contador from "./components/Contador.vue";
+
+
+import Ejercicio from './components/Ejercicio.vue';
 
 
 export default {
   //Options API
   name: "App",
   components: {
-    Contador,
-    CaracolaMagica,
+
+
+    Ejercicio,
   },
 };
 </script>
