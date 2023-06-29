@@ -1,15 +1,50 @@
 <template>
-  <h3>Imagen Pokemon</h3>
+  <div class="contenedorImagen">
+    <img
+      class="ocultaPokemon"
+      :src="imagenFuente"
+      alt="No se puede mostrar imagen"
+    />
+    <img v-if="muestraPokemon" :src="imagenFuente" alt="No se puede mostrar imagen" />
+  </div>
 </template>
 
 <script>
-
 export default {
+  props: {
+    pokemonId: {
+      type: Number,
+      required: true,
+    },
 
-}
+    muestraPokemon:{
+      type: Boolean,
+      required: true,
+    }
+  },
+  computed: {
+    imagenFuente() {
+      console.log("HOLa")
+      /*return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/" + this.pokemonId +".svg"*/
+        return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.pokemonId}.svg`
+
+    },
+  },
+};
 </script>
 
-<style>
+<style scoped>
+.contenedorImagen {
+  height: 200px;
+}
+.ocultaPokemon {
+  filter: brightness(0);
+}
 
-
+img {
+  position: absolute;
+  height: 200px;
+  right: 42%;
+  margin-top: 115px;
+}
 </style>
