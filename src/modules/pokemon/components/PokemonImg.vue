@@ -24,7 +24,6 @@ export default {
   },
   computed: {
     imagenFuente() {
-      console.log("HOLa")
       /*return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/" + this.pokemonId +".svg"*/
         return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${this.pokemonId}.svg`
 
@@ -46,5 +45,6 @@ img {
   height: 200px;
   right: 42%;
   margin-top: 115px;
+  margin-bottom: 254px;
 }
 </style>
