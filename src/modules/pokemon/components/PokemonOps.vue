@@ -6,7 +6,7 @@
       <li>2</li>
       <li>3</li>
       <li>4</li>-->
-      <li v-for="pokemon in opciones" :key="pokemon.id">{{pokemon.nombre}}</li>
+      <li v-for="pokemon in opciones" :key="pokemon.id" @click="$emit('seleccionar',pokemon.id)">{{pokemon.nombre}}</li>
     </ul>
   </div>
 </template>
@@ -20,6 +20,12 @@ export default {
       type:Array,
       required:true
     }
+  },
+
+  methods:{
+    pruebaDeEvento(){
+      console.log("Prueba de evento")
+    }
   }
 };
 </script>
@@ -30,6 +36,7 @@ ul {
     display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: -35px;
 }
 li {
   border: 1px solid rgb(153, 153, 241);
