@@ -1,28 +1,18 @@
 <template>
-        
-  <PokemonPage/>
-
+  <NavBar/>
+  <router-view />
 </template>
 
 <script>
-
-import CaracolaMagica from './components/CaracolaMagica.vue';
-import Contador from "./components/Contador.vue";
-
-import PokemonPage from "./modules/pokemon/pages/PokemonPages.vue"
-
-
+import NavBar from "./modules/pokemon/components/NavBar.vue";
 export default {
-  //Options API
   name: "App",
+
   components: {
-    Contador,
-    CaracolaMagica,
-    PokemonPage,
+    NavBar,
   },
 };
 </script>
-
 <style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
