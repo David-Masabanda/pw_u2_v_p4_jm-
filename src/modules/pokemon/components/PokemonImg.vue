@@ -34,7 +34,11 @@ export default {
 
 <style scoped>
 .contenedorImagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 200px;
+  margin-top: 30px;
 }
 .ocultaPokemon {
   filter: brightness(0);
@@ -43,8 +47,7 @@ export default {
 img {
   position: absolute;
   height: 200px;
-  right: 42%;
-  margin-top: 115px;
-  margin-bottom: 254px;
+
+
 }
 </style>
